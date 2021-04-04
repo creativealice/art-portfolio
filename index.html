@@ -10,34 +10,27 @@
     rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Courgette&family=Poiret+One&display=swap" rel="stylesheet">
-    <title>Alice Cao</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Alice Cao - Artist & Illustrator</title>
 </head>
 
 <body>
     <header class="sticky">
         <nav>
-            <ul class="menu">
-                <li><a href=""><span class="material-icons md-48">email</span></a></li>
-            </ul>
+            <a href="#connect">
+                <img class="email" src="./images/email.png" alt="">
+            </a>
         </nav>
     </header>
 
     <main>
-        <section class="parallax">
-            <section class="parallax2" data-speed="2"></section>
-            <section class="parallax3" data-speed="5"></section>
-            <section class="description">
-                <div class="typewriter">
-                    <h1>Hi, I'm Alice</h1>
-                    <h2>Fantasy artist & illustrator</h2>
-                </div>
-                <p>Artist who loves to paint stories and fantasy worlds. Check out my art below.
-                </p>
-                <a class="chat-button bounce-top" href="#">Let's chat</a>
-            </section>
-        </section>
-
-        <section class="parallax3"></section>
+        <section class="parallax"></section>
+        <div class="name">
+            <div class="bar-bg">
+                <h1>Alice Cao <span class="artist">Artist & illustrator</span></h1>
+            </div>
+        </div>
         <section class = "image-gallery">
             <section class= "thumbnail">
                 <img id="whales" src="https://cdnb.artstation.com/p/assets/images/images/025/414/971/20200401012802/smaller_square/alice-cao-dusk-whales-alice-cao-insta.jpg?1585722482" alt="Dusk whales - three whales soar in a starry sky">
@@ -97,6 +90,7 @@
     </main>
 
     <section class="lightbox">
+        <!-- Close control -->
         <span class="close">&times;</span> 
         <div class="lightbox-slide">
             <img class="lightbox-image" src="./images/Forest-Spirit_Alice-Cao.jpg" alt="">
@@ -107,24 +101,33 @@
     </section>
 
     <footer>
-    <h2 class="tracking-in-expand">Let's chat</h2>
-        <form name="submit-to-google-sheet">
-            <input name="name" type="text" placeholder="Name" required>*<br>
-            <input name="email" type="email" placeholder="Email" required>*<br>
-            <button type="submit">Send</button>
-          </form>
-          
-          <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzToRQMoZ8hAS-uJwa_bLbFUOJ6D_-jItc-D8QT3hifnl6_bBDK/exec'
-            const form = document.forms['submit-to-google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
-                .catch(error => console.error('Error!', error.message))
-            })
-          </script>
+        <section class="contact-details">
+            <h2 id="connect">Let's connect</h2>
+            
+            <form name="submit-to-google-sheet">
+                <input name="name" type="text" placeholder="Name" required>*<br>
+                <input name="email" type="email" placeholder="Email" required>*<br>
+                <button type="submit">Send</button>
+            </form>
+            
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbzToRQMoZ8hAS-uJwa_bLbFUOJ6D_-jItc-D8QT3hifnl6_bBDK/exec'
+                const form = document.forms['submit-to-google-sheet']
+            
+                form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => console.log('Success!', response))
+                    .catch(error => console.error('Error!', error.message))
+                })
+            </script>
+
+            <ul class="social-links">
+                <li><a href="https://www.instagram.com/creative.alice/"><img src="./images/instagram.png" alt=""></a></li>
+                <li><a href="https://twitter.com/AliceCaoArt"><img src="./images/twitter.png" alt=""></a></li>
+                <li><a href="https://www.linkedin.com/in/alice-cao-668415157/"><img src="./images/linkedin.png" alt=""></a></li>
+            </ul>
+        </section>
     </footer>
 
     <script src="./main.js"></script>

@@ -1,5 +1,27 @@
 //1. create modal - large image sbox with black background
 
+//email on hover effect
+var emailIcon = document.querySelector('.email')
+
+emailIcon.addEventListener('mouseover', function() {
+    emailIcon.src = './images/emailhover.png'
+    })
+
+emailIcon.addEventListener('mouseout', function() {
+    emailIcon.src = './images/email.png'
+    })
+
+
+//Trigger thank you message on send
+var button = document.querySelector('button')
+var connectForm = document.querySelector('form')
+var letsConnectTitle = document.querySelector('#connect')
+
+button.addEventListener('click', function() {
+    letsConnectTitle.style.display = 'none'
+    connectForm.innerHTML = `<p id="thank-you-message">Thanks for getting in touch! I'll get back to you as soon as I can.</p><br>`    
+}) 
+
 //function to show lightbox on click
 
 var lightbox = document.querySelector('.lightbox')
