@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+      font-family: verdana;
+      font-size: 1.5rem;
+      margin: 0;
+
+  }
+
+  .material-icons {
+      color: white;
+      font-size: 30px;
+  }
+
+.material-icons.md-48 { 
+      font-size: 48px; 
+      border: solid                                             #135c3b;
+}
+
+.parallax {
+    background: url('https://cdnb.artstation.com/p/assets/images/images/006/386/887/large/alice-cao-forest-spirit-alice-cao.jpg?1498182894');
+    min-height: 800px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+/* .parallax2 {
+    background: url(./images/grass.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    min-height: 500px;
+    min-width: 100%;
+    transform: translate3d(0px, 0px, 0px);
+} */
+
+/* animation on scroll that changes the 2nd px to -ve numbers */
+
+/* .parallax3 {
+    background: url(./images/grass3.png);
+    background-attachment: scroll;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    min-height: 500px;
+    min-width: 100%;
+    left: 0px;
+    transform: translate3d(0px, 0px, 0px);
+} */
+
+.sticky {
+    width: 100%;
+    padding-right: 20px;
+    position: fixed;
+    top: 0;
+}
+
+nav ul a {
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px;
+    
+}
+
+.description {
+    background: rgba(255,255,255,0.6);
+    width: 300px;
+    box-shadow: 0 0 10px #000;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.chat-button,
+button {
+    background: #135c3b;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.chat-button:hover,
+button:hover {
+    background: #2bab9c;
+    cursor: pointer;
+}
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #135c3b; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+      /* font-family: 'Amatic SC', cursive; */
+/*  */
+/* font-family: 'Poiret One', cursive; */ */
+  }
+
+  h2 {
+    font-family: 'Courgette', cursive;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #135c3b; }
+  }
+
+
+
+.image-gallery {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    text-align: center;
+    padding-top: 20px;
+    gap: 10px;
+}
+
+
+img {
+    height: auto;
+    display: block;
+}
+
+.thumbnail {
+    position: relative;
+    display: inline-block;
+}
+
+/* .thumbnail img {
+     max-height: 40%; 
+} */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: .5s ease;
+    color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+}
+
+.overlay:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.text {
+    margin: 0 auto;
+    font-size: 2em;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top:0;
+	right:0;
+	bottom:0;
+	left:0;
+    background-color: black;
+}
+
+.lightbox-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.lightbox-image {
+    width: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+.close:hover,
+.close:focus {
+    color: #999;
+    cursor: pointer;
+}
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  /* margin-top: -50px; */
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  /* border-radius: 0 3px 3px 0; */
+  user-select: none; /*doesn't let user highlight or select text on double click*/
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  /* border-radius: 3px 0 0 3px; */
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    color: #999;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+}
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+footer {
+    background: #2bab9c;
+    min-height: 500px;
+}
+
+h2 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input::placeholder {
+    font-size: 1.5rem;
+}
+
+input:required { 
+    outline: none;
+  }
