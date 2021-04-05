@@ -12,75 +12,70 @@
 </head>
 
 <body>
-    <header class="sticky">
-        <nav>
+    <nav class="sticky">
             <a href="#connect">
                 <img class="email" src="./images/email.png" alt="">
             </a>
-        </nav>
-    </header>
-
+    </nav>
     <main>
         <section class="parallax">
             <img src="./images/background.jpg" id="background" alt="Background">
             <img src="./images/Spirit.png" id="spirit" alt="Spirit">
             <img src="./images/foreground.png" id="foreground" alt="Foreground trees">
-            <h1 id="text" class="text-shadow-pop-right">Alice Cao <span class="artist">Artist & illustrator</span></h1>
-            
-            
+            <a href="#image-gallery"><h1 id="title">Alice Cao <span class="artist">Artist & illustrator</span></h1></a>
         </section>
 
-        <section class = "image-gallery">
+        <section class="image-gallery" id="image-gallery">
             <section class= "thumbnail">
-                <img id="whales" src="https://cdnb.artstation.com/p/assets/images/images/025/414/971/20200401012802/smaller_square/alice-cao-dusk-whales-alice-cao-insta.jpg?1585722482" alt="Dusk whales - three whales soar in a starry sky">
+                <img id="whales" src="./images/dusk-whales-thumbnail.jpg" alt="Dusk whales - three whales soar in a starry sky">
                 <div class="overlay" id="dusk-whales">
                     <div class="text">Dusk whales</div>
                 </div>
             </section>
             <section class="thumbnail">
-                <img src="https://cdnb.artstation.com/p/assets/images/images/023/105/133/smaller_square/alice-cao-fantasy-deer-alice-cao.jpg?1578101608" alt="Deer in a forest at sunset">
+                <img src="./images/deer-thumbnail.jpg" alt="Deer in a forest at sunset">
                 <div class="overlay" id="deer">
                     <div class="text">Deer at sunset</div>
                 </div>
             </section>
             <section class="thumbnail">
-                <img src="https://cdnb.artstation.com/p/assets/images/images/013/278/711/smaller_square/alice-cao-long-lost-forests-alice-cao.jpg?1538891061" alt="Forest">
+                <img src="./images/forgotten-forests-thumbnail.jpg" alt="Forest">
             <div class="overlay" id="forgotten-forests">
                 <div class="text">Forgotten forests</div>
             </div>                      
             </section>
             <section class="thumbnail">
-                <img src="https://cdnb.artstation.com/p/assets/images/images/011/633/123/smaller_square/alice-cao-first-snow-alice-cao-artstation.jpg?1530588416" alt="First snow at a temple">
+                <img src="./images/snow-thumbnail.jpg" alt="First snow at a temple">
                 <div class="overlay" id="snow">
                     <div class="text">First snow</div>
                 </div>
             </section>
             <section class="thumbnail">
-                <img src="https://cdnb.artstation.com/p/assets/images/images/006/386/887/20170622205453/smaller_square/alice-cao-forest-spirit-alice-cao.jpg?1498182894" alt="Forest spirit">
+                <img src="./images/forest-spirit-thumbnail.jpg" alt="Forest spirit">
                 <div class="overlay" id="forest-spirit">
                     <div class="text">Forest spirit</div>
                 </div>
             </section>
             <section class="thumbnail">
-                <img src="https://cdna.artstation.com/p/assets/images/images/006/387/138/20170622212644/smaller_square/alice-cao-geisha-alice-cao.jpg?1498184805" alt="Geisha in digital watercolours">
+                <img src="./images/geisha-thumbnail.jpg" alt="Geisha in digital watercolours">
                 <div class="overlay" id="geisha">
                     <div class="text">Geisha</div>
                 </div>
             </section>
             <section class="thumbnail">
-                <img src="https://cdna.artstation.com/p/assets/images/images/006/386/952/20170622210243/smaller_square/alice-cao-best-friends-alice-cao.jpg?1498183363" alt="Two-headed dragon and a lamb">
+                <img src="./images/best-friends-thumbnail.jpg" alt="Two-headed dragon and a lamb">
                 <div class="overlay" id="best-friends">
                     <div class="text">Best friends</div>
                 </div>
             </section>
             <section class="thumbnail">
-                <img src="https://cdna.artstation.com/p/assets/images/images/006/387/058/smaller_square/alice-cao-catching-stars-alice-cao.jpg?1498184162" alt="Girl in a boat catching stars from the sky">
+                <img src="./images/catching-stars-thumbnail.jpg" alt="Girl in a boat catching stars from the sky">
                 <div class="overlay" id="catching-stars">
                     <div class="text">Catching stars</div>
                 </div>
             </section>
             <section class="thumbnail">
-                <img src="https://cdna.artstation.com/p/assets/images/images/006/386/986/smaller_square/alice-cao-swamp-walks-alice-cao.jpg?1498183512" alt="A wizard takes his giant pet ant on a walk in the swamp">
+                <img src="./images/swamp-walks-thumbnail.jpg" alt="A wizard takes his giant pet ant on a walk in the swamp">
                 <div class="overlay" id="swamp-walks">
                     <div class="text">Swamp walks</div>
                 </div>
@@ -92,16 +87,14 @@
         <!-- Close control -->
         <span class="close">&times;</span> 
         <div class="lightbox-slide">
-            <img class="lightbox-image" src="./images/Forest-Spirit_Alice-Cao.jpg" alt="">
+            <img class="lightbox-image" src="./images/forest-spirit.jpg" alt="">
         </div>
-         <!-- Next/previous controls -->
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
     </section>
 
     <footer>
         <section class="contact-details">
             <h2 id="connect">Let's connect</h2>
+
             <form name="submit-to-google-sheet">
                 <input name="name" type="text" placeholder="Name" required>*<br>
                 <input name="email" type="email" placeholder="Email" required>*<br>
@@ -121,14 +114,16 @@
             </script>
 
             <ul class="social-links">
-                <li><a href="https://www.instagram.com/creative.alice/"><img src="./images/instagram.png" alt=""></a></li>
-                <li><a href="https://twitter.com/AliceCaoArt"><img src="./images/twitter.png" alt=""></a></li>
-                <li><a href="https://www.linkedin.com/in/alice-cao-668415157/"><img src="./images/linkedin.png" alt=""></a></li>
+                <li><a href="https://www.instagram.com/creative.alice/"><img src="./images/instagram.png" alt="Instagram logo"></a></li>
+                <li><a href="https://twitter.com/AliceCaoArt"><img src="./images/twitter.png" alt="Twitter logo"></a></li>
+                <li><a href="https://www.linkedin.com/in/alice-cao-668415157/"><img src="./images/linkedin.png" alt="LinkedIn logo"></a></li>
             </ul>
+
+            <p class="copyright">&#169; Alice Cao</p>
+
         </section>
     </footer>
 
     <script src="./main.js"></script>
 </body>
-
 </html>
