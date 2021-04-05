@@ -1,6 +1,4 @@
-//1. create modal - large image sbox with black background
-
-//email on hover effect
+//Email on hover effect
 var emailIcon = document.querySelector('.email')
 
 emailIcon.addEventListener('mouseover', function() {
@@ -11,6 +9,20 @@ emailIcon.addEventListener('mouseout', function() {
     emailIcon.src = './images/email.png'
     })
 
+//Parallax
+var bg = document.querySelector('#background');
+var spirit = document.querySelector('#spirit');
+var fg = document.querySelector('#foreground');
+var text = document.querySelector('#text');
+
+window.addEventListener('scroll', function() {
+    var value = window.scrollY;
+
+    bg.style.top = value * 0.15 + 'px';
+    spirit.style.left = -value * 0.15 + 'px';
+    fg.style.top = value * 0.15 + 'px';
+    text.style.top = value * 1 + 'px';
+})
 
 //Trigger thank you message on send
 var button = document.querySelector('button')
@@ -22,7 +34,7 @@ button.addEventListener('click', function() {
     connectForm.innerHTML = `<p id="thank-you-message">Thanks for getting in touch! I'll get back to you as soon as I can.</p><br>`    
 }) 
 
-//function to show lightbox on click
+//Function to show lightbox on thumbnail click
 
 var lightbox = document.querySelector('.lightbox')
 // var clickWhalesOverlay = document.querySelector('#dusk-whales')
